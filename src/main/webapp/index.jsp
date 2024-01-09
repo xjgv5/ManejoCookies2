@@ -11,11 +11,12 @@
     <title>Cookies</title>
 </head>
 <body>
-<div class="container">
+<div class="container mt-5">
     <h1>Tarea 3</h1>
-    <p>Selecciona un color y ve como cambia este texto</p>
+    <p style="color: ${cookie.color.getValue() == null ? "black" : cookie.color.getValue()}">Selecciona un color y ve
+        como cambia este texto</p>
 
-    <form action="get">
+    <form action="/webapp-cookie-t4/cambiar-color" method="get">
         <label for="color">Selecciona un color</label>
         <select name="color" id="color" class="form-control">
             <option value="black">Negro</option>
@@ -28,6 +29,9 @@
             <option value="cyan">Cyan</option>
             <option value="teal">Teal</option>
         </select>
+        <div class="mt-3">
+            <input type="submit" value="Cambiar color" class="btn btn-primary">
+        </div>
     </form>
 </div>
 </body>
